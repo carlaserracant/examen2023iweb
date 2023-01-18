@@ -20,7 +20,7 @@ export default{
 <template>
     <table class="tabla-Grande">
 
-        <td class="celda-Anuncio"><img :src='imagen' width="375" /></td>
+        <td class="celda-Anuncio"><img :src='imagen' width="120" /></td>
 
             <td class="celda-Anuncio">
 
@@ -55,3 +55,8 @@ export default{
         </td>
     </table>
 </template>
+
+<style scoped>
+@import '../assets/mostrarInformacionStyle.css';
+</style>
+
