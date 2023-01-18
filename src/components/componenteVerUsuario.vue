@@ -11,16 +11,12 @@ export default{
             conexion: localStorage.getItem('Conexion'),
             caducidad: localStorage.getItem('Caducidad')
         };
-    },
-    methods: {
-    getPlaceholder() {
-      return "Busque una vivienda segun su provincia";
-    },
-    getBusqueda(){
-        return " " + this.busqueda;
-    }
     }
   
 };
 
 </script>
+
+<template>
+    <h1> {{ usuario }}</h1>
+</template>
