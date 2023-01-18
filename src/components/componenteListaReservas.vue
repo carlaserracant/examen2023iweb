@@ -15,7 +15,7 @@ export default {
     // Cortar desde 0 hasta la aparición del @
     let nombreSinCorreo = nombreCorreo.substring(0, indice);
     // Simple GET request using axios
-    axios.get("https://2kl0wm.deta.dev/appReservas/reservas/" + nombreSinCorreo).then(response => this.reservas = response.data);
+    axios.get("https://plwap8.deta.dev/appReservas/reservas/" + nombreSinCorreo).then(response => this.reservas = response.data);
   }
 };
 

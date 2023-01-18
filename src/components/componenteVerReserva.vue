@@ -11,7 +11,7 @@ export default {
   created() {
       var parametro = this.$route.params.id;
       console.log(parametro)
-      axios.get("https://2kl0wm.deta.dev/appReservas/reserva", { params: { id: parametro } }).then(response => this.reserva = response.data);
+      axios.get("https://plwap8.deta.dev/appReservas/reserva", { params: { id: parametro } }).then(response => this.reserva = response.data);
   }
 }
 

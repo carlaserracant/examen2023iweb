@@ -66,11 +66,11 @@ export default{
     methods: {
         buscarTiempo(parametro){
             console.log(parametro)
-            axios.get("https://2kl0wm.deta.dev/appTiempo/tiempo/provincia", { params: { provincia: parametro } }).then(response => this.resultado = response.data);
+            axios.get("https://plwap8.deta.dev/appTiempo/tiempo/provincia", { params: { provincia: parametro } }).then(response => this.resultado = response.data);
         }
     },
     created() {
-      axios.get("https://2kl0wm.deta.dev/appTiempo/tiempo/nacional").then(response => this.resultadoNacional = response.data);
+      axios.get("https://plwap8.deta.dev/appTiempo/tiempo/nacional").then(response => this.resultadoNacional = response.data);
     }
 }
 

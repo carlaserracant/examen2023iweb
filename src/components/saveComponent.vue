@@ -34,7 +34,7 @@ export default {
                 "comentarios" : []
             };
 
-            axios.post("https://2kl0wm.deta.dev/appVivienda/viviendas", objeto).then((result) => {
+            axios.post("https://plwap8.deta.dev/appVivienda/viviendas", objeto).then((result) => {
             this.id = result.data;
             });
 
@@ -60,7 +60,7 @@ export default {
                 function () {
                     this.fileContents = reader.result;
                     this.prepareFormData();
-                    let cloudinaryUploadURL = `https://api.cloudinary.com/v1_1/daul9twnh/image/upload`;
+                    let cloudinaryUploadURL = `https://api.cloudinary.com/v1_1/dyfjvgtmq/image/upload`;
                     
                     let requestObj = {
                         url: cloudinaryUploadURL,
@@ -191,8 +191,8 @@ export default {
             filesSelected : 0, 
             fileContents: null, 
             formData : null,
-            cloudname: "daul9twnh", 
-            preset: "gaze5wlc", 
+            cloudname: "dyfjvgtmq", 
+            preset: "fivlxjqq", 
             token : jwt_decode(localStorage.getItem('Token'))
         }
     }
