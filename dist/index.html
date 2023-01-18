@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <div id="g_id_onload"
+         data-client_id="916535315888-q1or1qldbfcjdhdsdbv3drnhus8kbh55.apps.googleusercontent.com"
+         data-callback="handleCredentialResponse">
+    </div>
+    <script src="jwt-decode.js"></script>
+    <title>The Good House</title>
+    <script type="module" crossorigin src="/assets/index.5ea75231.js"></script>
+    <link rel="stylesheet" href="/assets/index.ab5f5bb7.css">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="jwt-decode.js"></script>
+    <script>
+      function handleCredentialResponse(response) {
+       
+        const responsePayload = jwt_decode(response.credential);
+    
+        console.log("ID: " + responsePayload.sub);
+        console.log('Full Name: ' + responsePayload.name);
+        console.log('Given Name: ' + responsePayload.given_name);
+        console.log('Family Name: ' + responsePayload.family_name);
+        console.log("Image URL: " + responsePayload.picture);
+        console.log("Email: " + responsePayload.email);
+
+        localStorage.setItem('Token', response.credential); 
+        localStorage.setItem('NombreUsuario', responsePayload.email);  
+        location.reload();
+        alert("Bienvenido " + responsePayload.name)
+
+      }
+    </script>
+    
+  </body>
+</html>
