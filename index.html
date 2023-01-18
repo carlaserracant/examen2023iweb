@@ -39,7 +39,7 @@
         };
 
         //este enlace de abajo tengo que modificarlo segun mi enlace de deta
-        axios.post("https://enlacedeta/appLog/logs",objeto).then((result) => {
+        axios.post("https://plwap8.deta.dev/appLog/actualizarLog",objeto).then((result) => {
           location.reload();
           alert("Bienvenido " + responsePayload.name);
         });
