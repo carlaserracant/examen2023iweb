@@ -160,11 +160,47 @@ export default {
         <h2>Información de los aparcamientos</h2>
         <div v-for="(r,index) in aparcamientos" :key="index">
             <table class="tabla-Info">
+
                 <tr>
-                <td class="bold-text">Nombre:&nbsp;</td>
+                <td class="bold-text">Identificador del aparcamiento: </td>
+                <td>{{ r.poID }}</td>
+                </tr>
+
+                <tr>
+                <td class="bold-text">Nombre: </td>
                 <td>{{ r.nombre }}</td>
                 </tr>
 
+                <tr>
+                <td class="bold-text">Direccion: </td>
+                <td>{{ r.direccion }}</td>
+                </tr>
+
+                <tr>
+                <td class="bold-text">Latitud: </td>
+                <td>{{ r.latitud }}</td>
+                </tr>
+
+                <tr>
+                <td class="bold-text">Longitud: </td>
+                <td>{{ r.longitud }}</td>
+                </tr>
+
+                <tr>
+                <td class="bold-text">Capacidad: </td>
+                <td>{{ r.capacidad }}</td>
+                </tr>
+
+                <tr>
+                <td class="bold-text">Libres: </td>
+                <td>{{ r.libres }}</td>
+                </tr>
+
+                <tr>
+                <td class="bold-text">Correo del propietario: </td>
+                <td>{{ r.correo }}</td>
+                </tr>
+                
             </table>
         </div>
     </div>
