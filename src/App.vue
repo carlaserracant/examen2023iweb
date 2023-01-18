@@ -36,6 +36,8 @@ export default {
 
     <nav>
       <router-link to="/"> Inicio </router-link>
+      <router-link to="/subirImagen">Subir imagen de aparcamiento</router-link>
+      <router-link to="/verImagen">Imagenes</router-link>
       <router-link href="" v-if="token" to="/verUsuario">Información Usuario</router-link>
       <router-link v-if="currentRoute === '/' && token" to="/" @click="cerrarSesion()">Cerrar sesión</router-link>
     </nav>
