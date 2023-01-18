@@ -35,21 +35,6 @@ export default{
                 <td>{{ usuario }}</td>
                 </tr>
 
-                <tr>
-                <td class="bold-text">Conexion:&nbsp;</td>
-                <td>{{ conexion }}</td>
-                </tr>
-
-                <tr>
-                <td class="bold-text">Caducidad:&nbsp;</td>
-                <td>{{ caducidad }}</td>
-                </tr>
-
-                <tr>
-                <td class="bold-text">Token:&nbsp;</td>
-                <td>{{ token }}</td>
-                </tr>
-
             </table>
 
         </td>
