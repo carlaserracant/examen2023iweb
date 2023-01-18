@@ -156,6 +156,19 @@ export default {
             <br>
     </div>
 
+    <div>
+        <h2>Información de los aparcamientos</h2>
+        <div v-for="(r,index) in aparcamientos" :key="index">
+            <table class="tabla-Info">
+                <tr>
+                <td class="bold-text">Nombre:&nbsp;</td>
+                <td>{{ r.nombre }}</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
 </template>
 
 <style scoped>
