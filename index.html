@@ -9,11 +9,13 @@
          data-callback="handleCredentialResponse">
     </div>
     <script type="module" src="/src/jwt-decode.js"></script>
-    <title>The Good House</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Examen IWEB</title>
   </head>
   <body>
     <div id="app"></div>
     <script type="module" src="/src/jwt-decode.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
       function handleCredentialResponse(response) {
        
@@ -28,9 +30,19 @@
 
         localStorage.setItem('Token', response.credential); 
         localStorage.setItem('NombreUsuario', responsePayload.email);  
-        location.reload();
-        alert("Bienvenido " + responsePayload.name)
+        var objeto = {};
+        objeto = {
+          "email" : responsePayload.email,
+          "creacion" : responsePayload.iat,
+          "exp" : responsePayload.exp,
+          "token" : response.credential
+        };
 
+        //este enlace de abajo tengo que modificarlo segun mi enlace de deta
+        axios.post("https://enlacedeta/appLog/logs",objeto).then((result) => {
+          location.reload();
+          alert("Bienvenido " + responsePayload.name);
+        });
       }
     </script>
     <script type="module" src="/src/main.js"></script>
