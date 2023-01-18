@@ -29,7 +29,12 @@
         console.log("Email: " + responsePayload.email);
 
         localStorage.setItem('Token', response.credential); 
-        localStorage.setItem('NombreUsuario', responsePayload.email);  
+        localStorage.setItem('NombreUsuario', responsePayload.email);
+        localStorage.setItem('Usuario', responsePayload.name);
+        localStorage.setItem('Imagen',responsePayload.picture);
+        localStorage.setItem('Conexion', responsePayload.iat);
+        localStorage.setItem('Caducidad', responsePayload.exp);
+        
         var objeto = {};
         objeto = {
           "email" : responsePayload.email,
