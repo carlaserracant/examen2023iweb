@@ -11,17 +11,7 @@ export default {
   },
   data() {
     return {
-      vivienda: null,
-      fechaInicio: null,
-      fechaFin: null,
-      huespedes: null,
-      reservas: null,
-      disponibles: true,
-      pagoPendiente: false,
-      loaded: false,
-      paidFor: false,
-      price: null,
-      reservaObjeto: {},
+      aparcamientos: null,
       token: null,
       comentario: "",
       nombreUsuario: ""
@@ -37,8 +27,9 @@ export default {
       this.nombreUsuario = nombre.substring(0, indice);
     }
     var parametro = this.$route.params.id;
-    axios.get("https://plwap8.deta.dev/appVivienda/vivienda", { params: { id: parametro } }).then(response => this.vivienda = response.data);
-    axios.get("https://plwap8.deta.dev/appReservas/reservas/viviendasAsociada/" + parametro).then(res => this.reservas = res.data);
+    axios.get("https://plwap8.deta.dev/appAparcamiento/aparcamientos").then(response => this.aparcamientos = response.data);
+    //axios.get("https://plwap8.deta.dev/appAparcamiento/aparcamientos", { params: { id: parametro } }).then(response => this.aparcamiento = response.data);
+    //axios.get("https://plwap8.deta.dev/appReservas/reservas/viviendasAsociada/" + parametro).then(res => this.reservas = res.data);
   },
   methods: {
     comentar() {
